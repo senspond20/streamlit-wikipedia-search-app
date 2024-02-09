@@ -31,9 +31,12 @@ def main():
                 st.write("<h4>위키 검색결과 요약</h4>", unsafe_allow_html=True)
                 st.write(page.summary, unsafe_allow_html=True)
 
-    st.image(
-        "https://images.unsplash.com/photo-1657256031790-e898b7b3f3eb?q=80&w=4032&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+    st.image("https://images.unsplash.com/photo-1657256031790-e898b7b3f3eb?q=80&w=4032&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
 
+    # footer
+    with open("./footer.html", "r") as f:
+        html = f.read()
+        st.write(html, unsafe_allow_html=True)
 
 if __name__ == "__main__":
     main()
