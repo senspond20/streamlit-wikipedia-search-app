@@ -16,7 +16,8 @@ class WordExtraction():
         # 불용어
         en_stop_words_list = stopwords.words('english')
         en_stop_words_list + ["the", "this", "are", "you","=","/","span"]
-        self.kn_stop_words_list = ["모두", "안녕", "사실", "직접", "바탕", "위해", "나중", "브랜", "이름", "본래", "무엇","가지","은는","이가"]
+        self.kn_stop_words_list = ["모두", "안녕", "사실", "직접", "바탕", "위해", "나중", "브랜", "이름",
+                                   "본래", "무엇","가지","은는","이가", "때문", "스킴","이후", "이전", "아래"]
         self.en_stop_words_list = en_stop_words_list
 
     def pre_processing(selt, text):
