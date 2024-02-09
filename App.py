@@ -7,21 +7,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 from wordcloud import WordCloud
-import sys
-
-# local : False
-production = True
-
-# share.streamlit 에 배포하면 konlpy 때문에 자바 환경변수 설정 필요
-if 'linux' in sys.platform and production:
-    import jdk
-    import os
-    from jdk.enums import OperatingSystem, Architecture
-    jdk.install('11', operating_system=OperatingSystem.LINUX)
-    jdk_version = 'jdk-11.0.19+7'
-    os.environ['JAVA_HOME'] = '/root/.jdk/{jdk_version}'
-    os.environ['PATH'] = f"{os.environ.get('PATH')}:{os.environ.get('JAVA_HOME')}/bin"
-
 
 def main():
     st.set_page_config(page_title="Wikipedia Search", page_icon=None, layout="centered", initial_sidebar_state="auto",
