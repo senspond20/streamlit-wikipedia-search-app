@@ -21,7 +21,7 @@
 
 ![error](images/jvm.jpg)
 
-+ 아래처럼 코드를 심어서 서버에서 JDK 를 설치되도록 시도해보았으나 실패.
++ 아래처럼 코드를 심어서 서버에서 JDK 를 설치되도록 시도해보았으나 권한 문제로 실패.
 
 ```python
 import jdk
@@ -35,5 +35,6 @@ os.environ['PATH'] = f"{os.environ.get('PATH')}:{os.environ.get('JAVA_HOME')}/bi
 
 ![error](images/permission.jpg)
 
-+ packages.txt 파일을 만들고 default-jre
-+ 
+### 해결방법
+
+> 프로젝트 루트경로에 packages.txt 파일을 만들고 default-jre 입력 > 해결됨
