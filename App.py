@@ -62,7 +62,6 @@ def main():
                     fig = plt.figure()
                     plt.imshow(wc, interpolation='bilinear')
                     plt.axis('off')
-                    plt.show()
                     st.pyplot(fig)
                     nsp = np.array(tokens)
                     st.dataframe(pd.DataFrame(data= { "keyword" : nsp[:, 0], "count" : nsp[:,1]}))
