@@ -4,6 +4,15 @@
 
 > https://easywiki.streamlit.app/
 
-![demo](demo.jpg)
++ wikipedia search
+
+![demo1](images/demo1.jpg)
+
++ keyword extraction
+ 
+![demo2](images/demo2.jpg)
+  
+![demo2](images/demo3.jpg)
+
 
 

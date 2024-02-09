@@ -21,6 +21,7 @@ class WikiSearch():
         }
         self.wiki = wikipediaapi.Wikipedia(**params)
 
+
     def search(self, keyword: str):
         """
         :param keyword: 검색할 키워드
@@ -30,7 +31,6 @@ class WikiSearch():
         re_keyword = re.sub(r"[^ㄱ-힝a-zA-Z0-9]", "", keyword)
 
         return re_keyword, self.wiki.page(re_keyword)
-
 
 if __name__ == "__main__":
     wiki_ko = WikiSearch("ko", OutputFormat.WIKI)
