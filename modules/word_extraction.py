@@ -1,6 +1,7 @@
 # from konlpy.tag import Kkma
 # from konlpy.tag import Okt
 import nltk
+nltk.download('stopwords')
 from nltk.corpus import stopwords
 from collections import Counter
 from konlpy.tag import Komoran
