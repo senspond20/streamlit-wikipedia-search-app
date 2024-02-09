@@ -2,6 +2,7 @@
 # from konlpy.tag import Okt
 import nltk
 nltk.download('stopwords')
+nltk.download('punkt')
 from nltk.corpus import stopwords
 from collections import Counter
 from konlpy.tag import Komoran
