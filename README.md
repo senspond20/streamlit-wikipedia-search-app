@@ -2,7 +2,7 @@
 
 ## DEMO
 
-> https://wikipedia.streamlit.app/
+> https://easywiki.streamlit.app/
 
 ![demo](demo.jpg)
 
