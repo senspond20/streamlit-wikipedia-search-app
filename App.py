@@ -11,6 +11,7 @@ from wordcloud import WordCloud
 def main():
     st.set_page_config(page_title="Wikipedia Search", page_icon=None, layout="centered", initial_sidebar_state="auto",
                        menu_items=None)
+    # Streamlit의 description은 앱 GitHub 저장소의 README에서 설명을 가져온다..
 
     st.title("Wikipedia Search :sunglasses:")
     option = st.selectbox("검색할 언어를 선택하세요", ("한국어(ko)", "영어(en)", "일본어(ja)", "중국어(zh)"))
