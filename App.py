@@ -41,8 +41,10 @@ def main():
 
                 tokens = None
                 if language == 'ko':
+                    st.spinner(f"키워드 추출 중입니다...")
                     tokens = we.ko_extract(page.text)
                 elif language == 'en':
+                    st.spinner(f"키워드 추출 중입니다...")
                     tokens = we.en_extract(page.text)
                 else:
                     st.info("한국어/영어 위키백과를 제외한 키워드 추출은 지원되지 않습니다.")

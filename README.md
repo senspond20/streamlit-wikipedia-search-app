@@ -1,6 +1,7 @@
 # Streamlit Wikipedia Search App
+> 위키백과사전(wikipedia)를 간단하게 검색하고 본문에서 키워드를 추출해 워드클라우드 형태로 시각화 해주는 서비스입니
 
-## DEMO
+## DEMO다
 
 > https://easywiki.streamlit.app/
 
