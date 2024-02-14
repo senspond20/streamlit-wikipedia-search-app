@@ -26,16 +26,27 @@ nltk_download()
 
 
 class WordExtraction():
+    _instance = None
 
     def __init__(self):
+        """ 생성자 (lazy 싱글톤 패턴) """
+        if not WordExtraction._instance:
+            # 불용어
+            en_stop_words_list = stopwords.words('english')
+            en_stop_words_list + ["the", "this", "are", "you", "=", "/", "span"]
+            self.kn_stop_words_list = ["모두", "안녕", "사실", "직접", "바탕", "위해", "나중", "브랜", "이름",
+                                       "본래", "무엇", "가지", "은는", "이가", "때문", "스킴", "이후", "이전", "아래"]
+            self.en_stop_words_list = en_stop_words_list
+        else:
+            self.getInstance()
+
         self.mor = Komoran()
 
-        # 불용어
-        en_stop_words_list = stopwords.words('english')
-        en_stop_words_list + ["the", "this", "are", "you", "=", "/", "span"]
-        self.kn_stop_words_list = ["모두", "안녕", "사실", "직접", "바탕", "위해", "나중", "브랜", "이름",
-                                   "본래", "무엇", "가지", "은는", "이가", "때문", "스킴", "이후", "이전", "아래"]
-        self.en_stop_words_list = en_stop_words_list
+    @classmethod
+    def getInstance(cls):
+        if not cls._instance:
+            cls._instance = WordExtraction()
+        return cls._instance
 
     def pre_processing(self, text) -> str:
         """ 텍스트 전처리 """
